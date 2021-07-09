@@ -22,7 +22,6 @@ body{
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 80px;
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,7 +30,7 @@ body{
 
 #illustration{
     height: auto;
-    width: auto;
+    width: 50vw;
 }
 
 #text-section{
@@ -56,7 +55,7 @@ body{
     color: hsl(257, 40%, 49%);
     background-color: #fff;
     border: none;
-    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
     height: 50px;
     width: 220px;
     border-radius: 40px;
@@ -94,10 +93,26 @@ body{
     color: hsl(300, 69%, 71%) ;
     border: 1px solid hsl(300, 69%, 71%) ;
 }
+@media (max-width: 1200px){
+    #text-section{
+        margin-right: 0;
+    }
+    #main-heading{
+        font-size: 32px;
+    }
 
-@media (max-width: 480px){
+    #register-btn{
+        margin-top: 30px;
+    }
+
+    #social-media{
+        margin-top: 100px;
+    }
+}
+@media (max-width: 800px){
     body{
         background-image: url('./images/bg-mobile.svg');
+        background-repeat: no-repeat;
         overflow: visible;
         display: flex;
         flex-direction: column;
@@ -108,9 +123,10 @@ body{
 
     #logo{
         height: 30px;
-        margin-top: 10px;
+        margin-top: 20px;
         margin-left: 10%;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
+        align-self: flex-start;
     }
 
     #main-section{
@@ -120,17 +136,21 @@ body{
         width: 80vw;
         margin: 0px;
         margin-left: 10%;
+        margin-right: 10%;
     }
 
     #illustration{
         height: auto;
-        width: inherit;
-    
+        width: 80vw;
     }
     
     #text-section{
         margin: 0;
+        margin-top: 50px;
         align-self: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 
     #main-heading{
@@ -139,17 +159,33 @@ body{
     }
 
     #main-text{
+        margin-top: 20px;
         font-size: 16px;
     }
 
     #register-btn{
         align-self: center;
         margin: 0;
+        margin-top: 20px;
+        height: 40px;
+        width: 200px;
+        border-radius: 40px;
+        font-size: 14px;
     }
 
     #social-media{
         align-self: center;
         margin: 0;
+        margin-top: 80px;
+        font-size: 12px;
+    }
+
+    .circle{
+        width: 24px;
+        height: 24px;
+        border: 1px solid #fff;
+        border-radius: 24px;
+        margin-bottom: 30px;
     }
 
 }
